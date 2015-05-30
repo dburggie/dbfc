@@ -1,0 +1,6 @@
+build/
+EX/
+*.o
+*.bf
+*.bf.c
+dbfc
