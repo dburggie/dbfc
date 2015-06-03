@@ -16,6 +16,8 @@ all: ${BLD} ${OBJ} ${EXE}
 clean:
 	rm -f ${OBJ}
 	rm -f ${EXE}
+	rm -f output.bf.c
+	rm -f a.out
 
 install: ${INX}
 

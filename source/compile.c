@@ -57,7 +57,9 @@ int compile(const char const * filename, const char const * code)
 			case ',':
 				count = 1;
 				for (j = 0; j < depth; j++) fprintf(output,"\t");
-				fprintf(output, "buf[p] = getchar();\n");
+				fprintf(output,
+					"if (!feof(stdin)) buf[p] = getchar(); else buf[p] = 0xff;\n"
+				);
 				break;
 
 			case '.':
